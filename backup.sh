@@ -94,7 +94,7 @@ ARCHIVE_NAME="$FILE_NAME.tar.gz"
 #mongo -username "$MONGODB_USER" -password "$MONGODB_PASSWORD" admin --eval "var databaseNames = db.getMongo().getDBNames(); for (var i in databaseNames) { printjson(db.getSiblingDB(databaseNames[i]).getCollectionNames()) }; printjson(db.fsyncLock());"
 
 # Dump the database
-mongodump -username "$MONGODB_USER" -password "$MONGODB_PASSWORD" --authenticationDatabase "$AUTH_SERVER" --db "$MONGO_DB" --excludeCollectionsWithPrefix system --out $DIR/backup/$FILE_NAME
+mongodump -u "$MONGODB_USER" -p "$MONGODB_PASSWORD" --authenticationDatabase "$AUTH_SERVER" --db "$MONGO_DB" --excludeCollectionsWithPrefix system --out $DIR/backup/$FILE_NAME
 
 # Unlock the database
 #mongo -username "$MONGODB_USER" -password "$MONGODB_PASSWORD" admin --eval "printjson(db.fsyncUnlock());"
