@@ -124,5 +124,5 @@ https://$S3_BUCKET.s3-$S3_REGION.amazonaws.com/$ARCHIVE_NAME
 
 
 sleep 5
-// sleep 5 second then delete the arc
+# sleep 5 second then delete the arc
 rm -r $DIR/backup/$ARCHIVE_NAME
