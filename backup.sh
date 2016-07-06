@@ -33,8 +33,11 @@ AWS_ACCESS_KEY=
 AWS_SECRET_KEY=
 S3_REGION=
 S3_BUCKET=
+AUTH_SERVER=
+MONGO_DB=
 
-while getopts “ht:u:p:k:s:r:b:” OPTION
+
+while getopts “ht:u:a:d:p:k:s:r:b:” OPTION
 do
   case $OPTION in
     h)
@@ -43,6 +46,12 @@ do
       ;;
     u)
       MONGODB_USER=$OPTARG
+      ;;
+    a)
+      AUTH_SERVER=$OPTARG
+      ;;
+    d)
+      MONGO_DB=$OPTARG
       ;;
     p)
       MONGODB_PASSWORD=$OPTARG
