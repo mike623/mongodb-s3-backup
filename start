@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bash ./backup.sh -u [username] -p [userpassword] -a [authserver] -d [targetbackup]  -k [accesskey] -s [accessscret] -r [reg] -b [buk]
